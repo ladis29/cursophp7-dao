@@ -24,11 +24,27 @@
 	$search = Usuario::search("jo");
 
 	echo json_encode($search);
-*/
 
 //carrega um usuário usando o login e a senha
 	$usuario = new Usuario();
 	$usuario->login("joao", "qwerty");
+
+	echo $usuario;
+
+//INSERT DE NOVO USUÁRIO NO BANCO
+	$aluno = new Usuario("aluno", "çlkjhg");
+
+	$aluno->insert();
+
+	echo $aluno;
+*/
+
+//Update de dados no banco(neste caso usuário)
+	$usuario = new Usuario();
+
+	$usuario->loadById(8);
+
+	$usuario->update("professor", "POIUYTRE");
 
 	echo $usuario;
 
