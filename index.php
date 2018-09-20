@@ -37,7 +37,6 @@
 	$aluno->insert();
 
 	echo $aluno;
-*/
 
 //Update de dados no banco(neste caso usuário)
 	$usuario = new Usuario();
@@ -45,6 +44,16 @@
 	$usuario->loadById(8);
 
 	$usuario->update("professor", "POIUYTRE");
+
+	echo $usuario;
+*/
+
+//Deletar dados do bamco de dados
+	$usuario = new Usuario();
+
+	$usuario->loadById(7);
+
+	$usuario->delete();
 
 	echo $usuario;
 
